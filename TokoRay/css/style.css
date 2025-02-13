@@ -1,0 +1,245 @@
+/* Reset dasar */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2f3b47;
+    /* Latar belakang biru gelap malam */
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #1b2632;
+    /* Biru gelap seperti malam */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header ul li {
+    position: relative;
+}
+
+header ul li a {
+    color: white;
+    padding: 12px 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background-color: #3b4b61;
+    /* Aksen biru keabuan */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard Box */
+.box {
+    background-color: #34495e;
+    /* Abu-abu gelap untuk kotak */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #444;
+    color: #fff;
+}
+
+.input-control:focus {
+    border-color: #1b2632;
+    outline: none;
+    box-shadow: 0 0 5px rgba(27, 38, 50, 0.5);
+}
+
+.btn,
+.box a {
+    padding: 12px 15px;
+    background-color: #1b2632;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn:hover,
+.box a:hover {
+    background-color: #3b4b61;
+}
+
+/* Tabel */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2c3e50;
+    /* Biru gelap dengan aksen abu-abu */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table th {
+    background: #1b2632;
+    /* Biru gelap */
+    color: white;
+}
+
+.table tr:hover {
+    background-color: #3b4b61;
+    /* Biru keabu-abuan saat hover */
+}
+
+.table td a {
+    padding: 8px 12px;
+    background: #1b2632;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.table td a:hover {
+    background: #3b4b61;
+}
+
+.table img {
+    max-width: 50px;
+    border-radius: 5px;
+    transition: 0.3s;
+    object-fit: cover;
+    background-color: transparent;
+    /* Menghapus latar belakang gambar */
+}
+
+.table img:hover {
+    transform: scale(1.1);
+}
+
+/* Tombol Aksi (Edit & Hapus) */
+.table td a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #1b2632;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.table td a:hover {
+    background: #3b4b61;
+}
+
+.table td .btn-edit,
+.table td .btn-delete {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.table td .btn-edit:hover,
+.table td .btn-delete:hover {
+    background-color: #3b4b61;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #1b2632;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header ul {
+        flex-direction: column;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .table td img {
+        max-width: 40px;
+        /* Adjust image size for smaller screens */
+    }
+
+    .table td .btn-edit,
+    .table td .btn-delete {
+        font-size: 12px;
+        /* Adjust button size for smaller screens */
+    }
+}
